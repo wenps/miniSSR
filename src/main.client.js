@@ -6,6 +6,7 @@ import { createApp } from "./main.js";
 
 const app = createApp();
 
+// 同步asyncData上传的vuex数据
 if (window.__INITIAL_STATE__) {
   app.$store.replaceState(window.__INITIAL_STATE__);
 }

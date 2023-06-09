@@ -11,6 +11,7 @@ export default (content) => {
     router.onReady(() => {
       const components = router.getMatchedComponents();
       if (components.length) {
+        // 执行组件的asyncData函数进行数据初始化
         Promise.all(
           components.map((item) => {
             if (item.asyncData) {
